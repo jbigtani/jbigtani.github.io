@@ -1,7 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB's Travelog — Across America by Rail</title>
+    <style>
+        /* CSS Stylesheet embedded for simplicity */
+        :root {
+            --bg-color: #fafdfa;
+            --text-color: #2b2b2b;
+            --accent-color: #c84b31;
+            --secondary-bg: #f1f5f1;
+            --border-color: #e2e8e2;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            font-weight: 800;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #555;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Stats Grid */
+        .trip-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .stat-card {
+            background-color: var(--secondary-bg);
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Main Content / Index */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .index-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Travel Log Entry Card */
+        .log-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @media (min-width: 600px) {
+            .log-card {
+                grid-template-columns: 250px 1fr;
+            }
+        }
+
+        .log-image {
+            background-color: #ddd;
+            min-height: 160px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.9rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .log-details h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .log-details h3 a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .log-details h3 a:hover {
+            color: var(--accent-color);
+        }
+
+        .log-route {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .log-excerpt {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
 <body>
-    <h1>Welcome to My Travel Blog!</h1>
-    <p>First post coming soon.</p>
+
+    <header>
+        <div class="blog-meta">JB's Travelog</div>
+        <h1>Across America by Rail</h1>
+        <p class="tagline">"7,781 miles. 16 days. One coach seat. Either it is for you — or it simply isn't."</p>
+    </header>
+
+    <section class="trip-stats">
+        <div class="stat-card">
+            <div class="stat-number">7,781</div>
+            <div class="stat-label">Total Miles</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">16</div>
+            <div class="stat-label">Days Traveled</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label">Coach Seat</div>
+        </div>
+    </section>
+
+    <main>
+        <h2>Journey Index</h2>
+        
+        <div class="index-grid">
+            
+            <article class="log-card">
+                <div class="log-image" style="background-image: url('path-to-your-thumbnail1.jpg');">
+                    [Image: NY to Chicago]
+                </div>
+                <div class="log-details">
+                    <div class="log-route">New York → Chicago → Sacramento</div>
+                    <h3><a href="https://jbigtani.github.io/amtrak-part1.html">Part 1: The California Zephyr & The First Night</a></h3>
+                    <p class="log-excerpt">
+                        Setting off from Metropark, hugging the cinematic Hudson River at dusk, and living out of the double-decker Sightseer Lounge car for 49 unforgettable hours along the rushing Colorado River.
+                    </p>
+                    <a href="https://jbigtani.github.io/amtrak-part1.html" class="read-more">Read Entry →</a>
+                </div>
+            </article>
+
+            <article class="log-card">
+                <div class="log-image">
+                    [Image Pending]
+                </div>
+                <div class="log-details">
+                    <div class="log-route">Sacramento → San Francisco → Los Angeles</div>
+                    <h3><a href="#">Part 2: The Coast Starlight Down the Pacific Rim</a></h3>
+                    <p class="log-excerpt">
+                        Moving from the historical rail hubs of Northern California straight down the rugged coastal shorelines heading towards Southern California. Coming soon.
+                    </p>
+                    <span class="read-more" style="color: #999;">Coming Soon</span>
+                </div>
+            </article>
+
+            <article class="log-card">
+                <div class="log-image">
+                    [Image Pending]
+                </div>
+                <div class="log-details">
+                    <div class="log-route">Los Angeles → Portland → Seattle → Chicago → NY</div>
+                    <h3><a href="#">Part 3: Completing the 7,781-Mile Loop</a></h3>
+                    <p class="log-excerpt">
+                        The grand finale tracking back through the Pacific Northwest and slicing eastward to close the circle back at Penn Station.
+                    </p>
+                    <span class="read-more" style="color: #999;">Coming Soon</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 JB's Travelog. All rail journeys logged live.
+    </footer>
+
 </body>
 </html>
